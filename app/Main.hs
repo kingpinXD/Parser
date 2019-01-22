@@ -3,4 +3,4 @@ module Main where
 import           Lib
 
 main :: IO ()
-main = print $ tokenize "12 + 24 / x1"
+main = (print . parse . tokenize) "x1 = -15 / (2 + x2)"
