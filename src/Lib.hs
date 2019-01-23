@@ -1,6 +1,7 @@
 module Lib
   ( operator
   , tokenize
+  , parse
   ) where
 
 import           Data.Char
@@ -123,5 +124,3 @@ parse toks =
    in if null toks'
         then tree
         else error $ "Leftover tokens: " ++ show toks'
-
-
