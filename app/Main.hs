@@ -1,5 +1,6 @@
 module Main where
 
+import           Ex
 import           Lib
 import           Word
 
