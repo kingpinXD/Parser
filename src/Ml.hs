@@ -1,5 +1,9 @@
 module Ml where
 
+import           Control.Monad.Reader
+--import           Control.Monad.Reader
+
+
 data ShoppingList a
   = Empty
   | Item a
@@ -33,3 +37,34 @@ modifyListAppL =
   [\(Item x) -> Item $ (x ++ "Applicative")] <*> [Item "Apple", Item "Banana"]
 
 justify (Just x) = Just x
+
+
+
+-- getPath :: Config -> String
+-- getPath = path
+
+-- cf :: Config
+-- cf = Config "tmp" "path"
+
+-- fN :: ReaderT Config String
+-- fN = do
+--   env <- ask
+--   putStrLn path
+
+data Config = Config {path :: String} deriving (Show)
+
+
+
+tom :: Reader Config String
+tom = do
+  env <- ask 
+  return (path env)
+
+tomAndJerry :: Reader Config String
+tomAndJerry = do
+  t <- tom
+  return (t )
+
+runJerryRun :: String
+runJerryRun = (runReader tomAndJerry) "Who is this?"
+
