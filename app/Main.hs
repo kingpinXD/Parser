@@ -3,6 +3,7 @@ module Main where
 import           Ex
 import           Lib
 import           Word
+import Strwh
 --import           Rm
 import Test
 

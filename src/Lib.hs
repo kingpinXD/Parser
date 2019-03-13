@@ -11,6 +11,7 @@ data Operator
   | Minus
   | Times
   | Div
+  
   deriving (Show, Eq)
 
 data Token
