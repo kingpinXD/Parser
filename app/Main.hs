@@ -3,7 +3,7 @@ module Main where
 import           Ex
 import           Lib
 import           Word
-import Strwh
+import           Readfile
 --import           Rm
 
 main :: IO ()
