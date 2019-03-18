@@ -3,9 +3,10 @@ module Main where
 import           Ex
 import           Lib
 import           Word
-import Strwh
+import RealWorldhaskell
+--import Strwh
 --import           Rm
-import Test
+--import Test
 
 main :: IO ()
 --main = (print . parse . tokenize) "x1 = -15 / (2 + x2)"
