@@ -3,7 +3,8 @@ module Main where
 import           Ex
 import           Lib
 import           Word
-import           Readfile
+import RealWorldhaskell
+--import Strwh
 --import           Rm
 --import Test
 

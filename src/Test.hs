@@ -29,7 +29,7 @@ data ConfigInfo = ConfigInfo
 readConfig :: MonadIO m => String -> m ConfigInfo
 readConfig f = do
 
-      bracket (readfile emptyCP f) hClose 
+     bracket (readfile emptyCP f) hClose 
       (\h -> undefined)
     
 
