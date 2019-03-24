@@ -23,7 +23,7 @@ getContent = do
   x <-
     R.catchAny (readFromDisk "./asd.txt") $ \e -> do
       putStrLn $ "Caught an exception: " ++ show e
-      return ""
+      return "Testing commit"
   putStrLn $ x
 
 throwErrorSample :: IO ()
