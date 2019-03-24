@@ -18,7 +18,7 @@ data AppLog = AppLog {
       ,count :: Int
    } deriving (Show)
 
-newtype App = WriterT [AppLog] ( ReaderT AppConfig (StateT AppState IO))
+type App = WriterT [AppLog] (ReaderT AppConfig (StateT AppState IO))
 
 runApp :: App a -> Int -> IO ((a, [AppLog]), AppState)
 runApp k maxDepth =
